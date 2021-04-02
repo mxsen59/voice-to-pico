@@ -18,9 +18,9 @@
         <h1>Voice to Pico using Teachable Machine</h1>
       </div>
       <div>
-        <h5 style="margin-right: 20px;">Connect To Pico</h5>
+        <h5 style="margin-right: 20px">Connect To Pico</h5>
         <button type="button" class="btn btn-primary" onclick="connect()">
-            Connect
+          Connect
         </button>
       </div>
       <li></li>
@@ -53,7 +53,7 @@
 
       // Teachable Machine model URL:
       let soundModel =
-        "https://teachablemachine.withgoogle.com/models/kxUizeLqi/";
+        "https://teachablemachine.withgoogle.com/models/1CINgniVS/";
 
       function sendByte(b) {
         if (port && port.writable) {
@@ -103,14 +103,12 @@
           sendByte(new Uint8Array([116]));
         } else if (label === "Remind me") {
           sendByte(new Uint8Array([114]));
-        } else if (label === "Hello") {
+        } else if (label === "Greet") {
+          sendByte(new Uint8Array([103]));
+        } else if (label === "High") {
           sendByte(new Uint8Array([104]));
-        } else if (label === "Turn On") {
-          sendByte(new Uint8Array([111]));
-        } else if (label === "Turn Off") {
-          sendByte(new Uint8Array([102]));
-        } else if (label === "Shutdown Devices") {
-          sendByte(new Uint8Array([100]));
+        } else if (label === "Low") {
+          sendByte(new Uint8Array([108]));
         } else if (label === "Temp") {
           sendByte(new Uint8Array([109]));
         }
