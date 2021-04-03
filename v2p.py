@@ -26,31 +26,8 @@ def main():
      
         while sys.stdin in select.select([sys.stdin], [], [], 0)[0]:        
             ch = sys.stdin.read(1)
-            
-            if (ch == 't'):
-                print(str(ch))
-                todo_input = input("Add to your todo list: ")
-                with open("todo_list.txt", "a") as td_file:
-                    td_file.write("\n" + todo_input.strip(str(ch)))
-                    onboard_led.value(1)
-                    led_rgb_2.value(1)
-                    print("Added to list successfully.\n")
-                    time.sleep(0.5)
-                    onboard_led.value(0)
-                    led_rgb_2.value(0)
-                    time.sleep(0.5)
-                      
-            elif (ch == 'r'):
-                print(str(ch))
-                with open("todo_list.txt", "r") as td_file:
-                    lines = td_file.readlines()
-                    led_rgb_2.value(1)
-                    print("\nReminder you need to: " + str(lines[0:]).strip("[]") + "\n")
-                    time.sleep(0.5)
-                    led_rgb_2.value(0)
-                    time.sleep(0.5)
                                
-            elif (ch == 'g'):
+            if (ch == 'g'):
                 print(str(ch))
                 onboard_led.value(1)
                 led_rgb_2.value(1)
