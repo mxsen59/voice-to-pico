@@ -1,5 +1,5 @@
-from machine import Pin, ADC
-import array, time, sys, os, select
+from machine import Pin
+import time, sys, select
 
 onboard_led = Pin(25, Pin.OUT)
 
