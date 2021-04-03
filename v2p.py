@@ -63,16 +63,27 @@ def main():
             elif (ch == "h"):
                 print(str(ch))
                 onboard_led.value(1)
+                led_rgb_2.value(1)
+                
                 
                 for _ in leds:
                     _.value(1)
                 
+                time.sleep(0.5)
+                led_rgb_2.value(0)
+                time.sleep(0.5)
+                
             elif (ch == "l"):
                 print(str(ch))
                 onboard_led.value(0)
+                led_rgb_2.value(1)
                 
                 for _ in leds:
                     _.value(0)
+                    
+                time.sleep(0.5)
+                led_rgb_2.value(0)
+                time.sleep(0.5)
                 
             elif (ch == "m"):
                 curr_voltage = temp_sensor.read_u16() * convert
