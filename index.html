@@ -53,7 +53,7 @@
 
       // Teachable Machine model URL:
       let soundModel =
-        "https://teachablemachine.withgoogle.com/models/1CINgniVS/";
+        "https://teachablemachine.withgoogle.com/models/6jxJwcdoa/";
 
       function sendByte(b) {
         if (port && port.writable) {
@@ -99,18 +99,10 @@
       function sendResult(label) {
         console.log(label);
 
-        if (label === "Todo") {
-          sendByte(new Uint8Array([116]));
-        } else if (label === "Remind me") {
-          sendByte(new Uint8Array([114]));
-        } else if (label === "Greet") {
-          sendByte(new Uint8Array([103]));
-        } else if (label === "High") {
+        if (label === "High") {
           sendByte(new Uint8Array([104]));
         } else if (label === "Low") {
           sendByte(new Uint8Array([108]));
-        } else if (label === "Temp") {
-          sendByte(new Uint8Array([109]));
         }
       }
 
