@@ -6,9 +6,9 @@
 ```
 git clone https://github.com/masen-f/voice-to-pico 
 ```
-#### After cloning the repo, copy 'v2p.py' to the pico.
+#### After cloning the repo, copy 'v2p.py' to the Pico.
 
-#### Open 'index.html' in your browser and connect to the pico!
+#### Open 'index.html' in the Chrome browser and connect to the Pico!
 
 #### Currently the only voice commands are 'High' and 'Low' which controls the onboard led. 
 
